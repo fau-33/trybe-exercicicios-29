@@ -11,7 +11,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Sessão 1: Introdução - Unix & Shell
 
 - [x] 1-3: _Unix & Shell- Part 1_
-- [ ] 1-4: _Unix & Shell- Part 2_
+- [x] 1-4: _Unix & Shell- Part 2_
 
 ##### Sessão 2: Git & GitHub
 
