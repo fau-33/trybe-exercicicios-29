@@ -93,8 +93,25 @@ const weekDay = "sexta-feira";
 
 //Se for algum dia de fim de semana, imprima “FINALMENTE, descanso merecido UwU”.
 
-if (weekDay === "segunda-feira" || weekDay === "terça-feira" || weekDay === "quarta-feira" || weekDay === "quinta-feira" || weekDay === "sexta-feira") {
+/* if (weekDay === "segunda-feira" || weekDay === "terça-feira" || weekDay === "quarta-feira" || weekDay === "quinta-feira" || weekDay === "sexta-feira") {
   console.log("Oba, mais um dia de aprendizado na Trybe >:D");
 }else {
   console.log("FINALMENTE, descanso merecido Uwu");
 }
+ */
+
+// Operador NOT
+console.log((2 + 2) === 4);
+console.log(!(2 + 2) === 4);
+// Strings
+const squirtle = "melhor pokemon inicial";
+console.log(!squirtle); // false
+// Numeros
+console.log(!42); // false
+
+console.log(!0); // true
+// O número 0 tem o valor "falsy" no javascript. Logo, seu oposto é true.
+// Valores nulos
+console.log(!null); // true
+// valores indefinidos
+console.log(!undefined); // true
