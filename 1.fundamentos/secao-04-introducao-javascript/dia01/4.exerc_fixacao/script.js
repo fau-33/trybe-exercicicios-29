@@ -50,7 +50,7 @@ let message = '';
 //Se o horário estiver entre 11 e 14, insira “Hora do almoço!!!” na variável “message”.
 
 //Se o horário estiver entre 4 e 11, insira “Hmmm, cheiro de café recém-passado” na variável “message”.
-if (currentHour >= 22) {
+/* if (currentHour >= 22) {
   message = 'Não deveríamos comer nada, é hora de dormir';
 } else if (currentHour >= 14 && currentHour < 18) {
   message = 'Vamos fazer um bolo pro café da tarde?';
@@ -58,6 +58,43 @@ if (currentHour >= 22) {
   message = 'Hora do almoço!!!';
 } else if (currentHour >= 4 && currentHour < 11) {
   message = 'Hmmm, cheiro de café recém-passado';
-}
+} */
 
-console.log(message);
+//console.log(message);
+
+// Operador OR
+//Você já viu um operador em que as duas condições devem ser verdadeiras para que o resultado final seja verdadeiro.
+
+//Com o operador OR (ou ||, no JavaScript), precisamos apenas que uma das condições sejam verdadeiras: isso ou aquilo.
+
+//Por exemplo, imagine novamente que estamos na padaria, mas nosso pedido agora vai ser diferente. Dessa vez, se não tiver um café, pode ser um suco de laranja. Como escreveríamos isso em JavaScript?
+
+/* const bebidaPrincipal =  'cafezinho';
+const bebidaAlternativa = 'suco de laranja';
+
+if (bebidaPrincipal === 'cafezinho' || bebidaAlternativa === 'suco de laranja') {
+  console.log("Obrigado por me atender :D")
+} else {
+  console.log("Ei, eu não pedi isso!");
+}
+ */
+
+//console.log(true || true); // true
+//console.log(true || false); // true
+//console.log(false || true); // true
+//console.log(false || false); // false
+
+// Para fixar
+// Crie uma variável chamada “weekDay” que receba a string “quarta-feira”.
+const weekDay = "sexta-feira";
+// Utilizando if/else, implemente condicionais para que:
+
+//Se nossa variável “weekDay” for “segunda-feira”, “terça-feira”, “quarta-feira”, “quinta-feira” ou “sexta-feira”, imprima “Oba, mais um dia de aprendizado na Trybe >:D”.
+
+//Se for algum dia de fim de semana, imprima “FINALMENTE, descanso merecido UwU”.
+
+if (weekDay === "segunda-feira" || weekDay === "terça-feira" || weekDay === "quarta-feira" || weekDay === "quinta-feira" || weekDay === "sexta-feira") {
+  console.log("Oba, mais um dia de aprendizado na Trybe >:D");
+}else {
+  console.log("FINALMENTE, descanso merecido Uwu");
+}
