@@ -70,6 +70,24 @@ for (let index = 0; index < numbers.length; index += 1) {
   }
 }
 
-console.log(menorNumero);
+//console.log(menorNumero);
+
+// 8.Utilizando for, crie um array que vá de 1 até 25 e imprima o resultado;
+let arrayNumeros = [];
+
+for (let index = 1; index <= 25; index += 1) {
+  arrayNumeros.push(index);
+}
+
+//console.log(ArrayNumeros);
+
+// 9.Utilizando o array que acabou de criar, imprima o resultado da divisão de cada um dos elementos por 2.
+
+for (let index = 1; index <= 25; index += 1) {
+  arrayNumeros.push(arrayNumeros[index] / 2);
+}
+
+console.log(arrayNumeros);
+
 
 
