@@ -1,7 +1,9 @@
 // 🚀 Lidando com Arrays
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let sum = 0;
+let numeroImpar = 0;
 let maiorNumero = numbers[0];
+let menorNumero = numbers[0];
 // 1.Percorra o array imprimindo todos os valores nele contidos com a função console.log();
 /* for (let number of numbers) {
   console.log(number);
@@ -44,8 +46,30 @@ for (let index = 0; index < numbers.length; index += 1) {
     maiorNumero = numbers[index];
   }
 }
-console.log(maiorNumero);
+//console.log(maiorNumero);
 
+// 6.Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: “nenhum valor ímpar encontrado”;
 
+for (let index = 0; index < numbers.length; index += 1) {
+  if (numbers[index] % 2 !== 0) {
+    numeroImpar += 1;
+  }
+}
+
+/* if (numeroImpar === 0) {
+  console.log('Nenhum valor encontrado!');
+} else {
+  console.log(numeroImpar);
+} */
+
+// 7.Utilizando for, descubra qual o menor valor contido no array e imprima-o;
+
+for (let index = 0; index < numbers.length; index += 1) {
+  if (numbers[index] < menorNumero) {
+    menorNumero = numbers[index];
+  }
+}
+
+console.log(menorNumero);
 
 
