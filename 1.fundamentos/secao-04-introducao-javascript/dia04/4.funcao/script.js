@@ -106,4 +106,37 @@ function maiorNumero(num1, num2) {
   }
 }
 
-console.log(maiorNumero(20, 5));
+//console.log(maiorNumero(20, 5));
+
+// 3.Faça um programa que retorne o maior de três números. Defina, no começo do programa, três constantes com os valores que serão comparados.
+
+function maiorDeTresNumeros(num1, num2, num3) {
+  if (num1 > num2 && num1 > num3) {   
+    return num1 + ' é maior que o ' + num2 + ' e maior que o ' + num3;
+  } else if (num2 > num1 && num2 > num3) {
+    return num2 + ' é maior que o ' + num1 + ' e maior que o ' + num3;
+  } else if (num3 > num1 && num3 > num2) {
+    return num3 + ' é maior que o ' + num1 + ' e maior que o ' + num2;
+  }
+}
+
+//console.log(maiorDeTresNumeros(20, 10, 5));
+//console.log(maiorDeTresNumeros(1, 30, 5));
+//console.log(maiorDeTresNumeros(1, -30, 15));
+
+// 4.Faça um programa que, dado um valor recebido como parâmetro, retorne “positive” se esse valor for positivo, “negative” se for negativo, e caso não seja nem positivo e nem negativo retorne “zero”.
+
+function numeroCartesiano(num) {
+  if (num > 0) {
+    return 'Numero positivo: ' + num;
+  } else if (num < 0) {
+    return 'Numero negativo: ' + num;
+  } else {
+    return 'zero ';
+  }
+}
+
+/* console.log(numeroCartesiano(1));
+console.log(numeroCartesiano(-1));
+console.log(numeroCartesiano(0));
+ */
