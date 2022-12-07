@@ -45,4 +45,40 @@ function indiceDoMaior(numeros) {
   return indiceMaior;
 }
 
-console.log(indiceDoMaior([2, 3, 6, 7, 10, 1]));
+//console.log(indiceDoMaior([2, 3, 6, 7, 10, 1]));
+
+// 3.Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+
+//Array de teste: [2, 4, 6, 7, 10, 0, -3];.
+//Valor esperado no retorno da função: 6.
+
+function indiceDoMenor(numeros) {
+  let indiceMenor = 0;
+
+  for(let indice in numeros) {
+    if(numeros[indiceMenor] > numeros[indice]) {
+      indiceMenor = indice;
+    }
+  }
+  return indiceMenor;
+}
+
+//console.log(indiceDoMenor([2, 4, 6, 7, 10, 0, -3]));
+
+// 4.Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+
+//Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];.
+//Valor esperado no retorno da função: Fernanda.
+
+function maiorPalavra(palavras) {
+  let maiorNome = palavras[0];
+  for(let indice in palavras) {
+    if(maiorNome.length < palavras[indice].length) {
+      maiorNome = palavras[indice];
+    }
+  }
+  return maiorNome;
+}
+
+//console.log(maiorPalavra(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
