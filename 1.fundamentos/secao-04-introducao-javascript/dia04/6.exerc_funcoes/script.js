@@ -82,3 +82,47 @@ function maiorPalavra(palavras) {
 
 //console.log(maiorPalavra(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
 
+// 5.Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+
+//Array de teste: [2, 3, 2, 5, 8, 2, 3];.
+//Valor esperado no retorno da função: 2.
+
+function maisRepetido(numeros) {
+  let contRepetido = 0;
+  let contNumero = 0;
+  let indexNumeroRepetido = 0;
+
+  for(let index in numeros) {
+    let verificaNumero = numeros[index];
+    for(let index2 in numeros) {
+      if(verificaNumero === numeros[index2]) {
+        contNumero += 1;
+      }
+
+      if(contNumero > contRepetido) {  
+        contRepetido = conNumero;
+        indexNumeroRepetido = index;
+      }
+      conNumero = 0;
+    }
+  }
+  return numeros[indexNumeroRepetido];
+}
+
+//console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3]));
+
+// 6.Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
+
+//Valor de teste: N = 5.
+//Valor esperado no retorno da função: 1+2+3+4+5 = 15.
+
+function somaDeTodosOsNumeros(numero) {
+  let total = 0;
+
+  for (let index = 1; index <= numero; index += 1) {
+    total += index;    
+  }
+  return total;
+}
+
+//console.log(somaDeTodosOsNumeros(5));
