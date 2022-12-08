@@ -51,3 +51,55 @@ imprimeIdade() */
   let b = 5;
   //console.log('O resultado da soma de ' + a + ' + ' + b + ' é: ' + soma(a,b));
   //console.log(`O resultado da soma de ${a} + ${b} é: ${soma(a,b)})`);
+
+// 🚀 Modifique a estrutura das funções a seguir para que elas sejam arrow functions;
+//🚀5.Transforme a função numeroAleatorio em uma arrow function;
+
+/* function numeroAleatorio() {
+  return Math.random()
+}
+console.log(numeroAleatorio()); */
+
+const numeroAleatorio = () => Math.random()
+//console.log(numeroAleatorio());
+
+// 🚀 6.Transforme a função hello em uma arrow function;
+
+/* function hello(nome) {
+  return `Olá, ${nome}!`
+}
+let nome = 'Ivan';
+console.log(hello(nome)); */
+
+//const hello = (nome) => `Olá, ${nome}!`;
+//let nome = 'Ivan';
+//console.log(hello(nome));
+
+// 🚀 7.Transforme a função nomeCompleto em uma arrow function;
+
+/* function nomeCompleto(nome, sobrenome) {
+  return `${nome} ${sobrenome}`
+}
+let nome = 'Ivan';
+let sobrenome = 'Pires';
+console.log(nomeCompleto(nome, sobrenome)); */
+
+//const nomeCompleto = (nome, sobrenome) => `${nome} ${sobrenome}`;
+//console.log(nomeCompleto('Flávio', 'Félix'));
+
+// 🚀 8.Altere a expressão if/else utilizando ternary operator;
+
+/* let speed = 90;
+const speedCar = (speed) => {
+  if (speed >= 120) {
+    return `Você ultrapassou o limite de velocidade`;
+  } else {
+    return `Você está na velocidade permitida`;
+  }
+};
+console.log(speedCar(speed)); */
+
+//let speed = 90;
+const speedCar = (speed) => speed >= 120 ? `Você ultrapassou o limite de velocidade`: `Você está na velocidade permitida`;
+//console.log(speedCar(120));
+
