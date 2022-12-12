@@ -1,0 +1,20 @@
+body {
+  background-color: #247BA0;
+}
+
+.meuNome, .descricao, .resido, h2, ul {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFE066;
+}
+.html {
+  font-size: 20px;
+}
+.css {
+  font-size: 18px;
+}
+.javascript {
+  font-size: 16px;
+}
+.bootstrap {
+  font-style: 14px;
+}
