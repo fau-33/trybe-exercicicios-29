@@ -39,3 +39,11 @@ const primeiroFilho2 = elementoOndeVoceEsta.previousElementSibling;
 
 const textElement = elementoOndeVoceEsta.nextSibling;
 
+// 7.Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+
+const terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
+
+// 8.Agora acesse o terceiroFilho a partir de pai.
+
+const terceiroFilho2 = pai.lastElementChild.previousElementSibling;
+console.log(terceiroFilho2);
