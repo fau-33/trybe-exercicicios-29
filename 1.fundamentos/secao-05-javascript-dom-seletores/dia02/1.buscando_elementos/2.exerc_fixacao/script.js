@@ -27,5 +27,15 @@ pai.style.color = 'red';
 const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
 primeiroFilhoDoFilho.innerHTML = 'primeiroFilhoDoFilho';
 
+// 4.Acesse o primeiroFilho a partir de pai.
 
-console.log(primeiroFilhoDoFilho);
+const primeiroFilho = pai.firstElementChild;
+
+// 5.Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+
+const primeiroFilho2 = elementoOndeVoceEsta.previousElementSibling;
+
+// 6.Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+
+const textElement = elementoOndeVoceEsta.nextSibling;
+
