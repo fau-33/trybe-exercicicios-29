@@ -69,5 +69,27 @@ const createHolidayButton = (buttonName) => {
 
 createHolidayButton('Feriados');
 
+// Parte 3
 
+/* implemente uma função que muda a cor de fundo dos dias que possuem a classe "holiday";
+Adicione ao botão "Feriados" um evento de "click" que altere a cor de fundo dos dias que possuem a classe "holiday".
+ */
 
+const displayHolidays = () => {
+  let getHolidayButton = document.querySelector('#btn-holiday');
+  let getHolidays = document.querySelectorAll('.holiday')
+  let backgroundColor = '#008000';
+  let setNewColor = 'white';
+
+  getHolidayButton.addEventListener('click', () => {
+    for (let index = 0; index < getHolidays.length; index += 1) {
+      if (getHolidays[index].style.backgroundColor === setNewColor) {
+        getHolidays[index].style.backgroundColor = backgroundColor;
+      } else {
+        getHolidays[index].style.backgroundColor = setNewColor;
+      }
+    }
+  });
+}
+
+displayHolidays();
