@@ -38,12 +38,24 @@ input.addEventListener('input', boxChangeText);
   techElement.innerText = event.target.value;
 }); */
 
-// - Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
+// 4.0. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
-//  - Que tal redirecionar para seu portfólio?
+//  4.1. Que tal redirecionar para seu portfólio?
 
-// - Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
+myWebpage.addEventListener('dblclick', () => {
+  window.location.replace('https://blog.betrybe.com/');
+});
+
+// 5.0 Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
+
+myWebpage.addEventListener('mouseover', (event) => {
+  event.target.style.color = 'red';
+});
+
+myWebpage.addEventListener('mouseout', (event) => {
+  event.target.style.color = 'unset';
+});
 
 // Segue abaixo um exemplo do uso de event.target:
 
