@@ -5,11 +5,22 @@ const input = document.getElementById('input');
 const myWebpage = document.getElementById('my-spotrybefy');
 
 
-// - Copie esse arquivo e edite apenas ele;
-//  - Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
+// 1. Copie esse arquivo e edite apenas ele;
+//  1.1. Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
 
-// - Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
-//  - Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
+// 2.0.Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
+//  2.1.Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
+
+const handleChangeTech = (event) => {
+  const techElement = document.querySelector('.tech');
+  techElement.classList.remove('tech');
+  event.target.classList.add('tech');
+  input.value = '';
+}
+
+firstLi.addEventListener('click', handleChangeTech);
+secondLi.addEventListener('click', handleChangeTech);
+thirdLi.addEventListener('click', handleChangeTech);
 
 // - Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
