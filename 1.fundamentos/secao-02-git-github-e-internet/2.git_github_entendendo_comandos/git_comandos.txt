@@ -1,0 +1,28 @@
+O que vamos aprender?
+Você já aprendeu o que é o Git! Agora chegou o momento de saber ainda mais sobre o GitHub que vai te ajudar a salvar seus códigos remotamente e a trabalhar de maneira colaborativa e distribuída. 🧩
+
+Hoje você vai aprender algumas técnicas para salvar seus projetos no GitHub e maximizar a eficiência do trabalho em grupo, garantindo uma boa qualidade do software que você escreve! 😮
+
+O GitHub é uma plataforma de hospedagem de código que trabalha com os comandos do Git para fazer o versionamento dos seus projetos. Dessa maneira, ele conecta o seu repositório local com o repositório remoto ou vice-versa.
+
+Você será capaz de:
+Copiar um repositório já existente no GitHub para o seu computador;
+
+Abrir Pull Requests;
+
+Subir seu repositório local para o GitHub;
+
+Enviar seus projetos para o repositório remoto do GitHub;
+
+Trabalhar em um mesmo projeto, com mais de uma pessoa, de forma assíncrona e distribuída.
+
+Por que isso é importante?
+Entender o conceito de Git é uma das habilidades fundamentais que você vai exercitar ao longo de todo o curso. É fato que, por ser um conceito novo e diferente para você, será necessário muita prática para sedimentar esse conceito.
+
+É por isso que utilizamos diariamente o Git e o GitHub no curso: para que você tenha inúmeras chances de executar os comandos do Git, criar repositórios, fazer commits e contribuir com seus Pull Requests nos projetos. Além de aprender na prática, conforme você for avançando, terá seus exercícios e soluções salvos no seu repositório do GitHub que poderá servir de portfólio mais tarde 😉
+
+Somente colocando em prática diariamente os conceitos do Git, você conseguirá se aperfeiçoar no uso de repositórios e no versionamento de código! 💪 👊
+
+O controle de versão possibilita que você tenha versões do seu projeto que sejam acessíveis para outras pessoas que estão trabalhando junto com você.
+
+Para refletir 💭: Imagine que você está em uma equipe com 4 pessoas e cada uma vai desenvolver uma parte do código, como você acha que ficaria essa organização?
