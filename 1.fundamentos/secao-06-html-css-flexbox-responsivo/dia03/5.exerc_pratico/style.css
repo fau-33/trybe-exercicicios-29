@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu {
+  border: 1px solid orangered;
+  display: flex;
+  justify-content: space-around;
+}
