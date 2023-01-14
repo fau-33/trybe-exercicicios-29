@@ -1,0 +1,8 @@
+Internet
+Unix
+Bash
+Html
+Css
+Javascript
+React
+Banco de dados
