@@ -83,3 +83,14 @@ hr {
   margin-top: 10px;
   width: 25%;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-img {
+  width: 25px;
+  margin-left: 10px;
+}
