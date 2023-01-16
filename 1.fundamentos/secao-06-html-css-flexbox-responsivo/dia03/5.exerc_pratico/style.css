@@ -2,25 +2,84 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Ubuntu';
 }
 
 .menu {
-  border: 1px solid orangered;
+  align-items: center;
   display: flex;
   justify-content: space-around;
-  background-color: #424242;
+  background-color: #323333;
+  width: 100%;
+}
+
+.menu-image {
+  width: 70px;
 }
 
 .menu h1 {
-  display: flex;
-  align-items: center;
   text-transform: uppercase;
-  color: #fff;
+  color: rgb(238, 238, 238);
+  font-size: 1.3rem;
 }
 
-.menu a {
+.menu h3 {
+  text-transform: uppercase;
+  color: rgb(194, 194, 194);
+  font-size: 1rem;
+  text-decoration: underline;
+}
+
+.menu h3:hover {
+  color: #0fa36b;
+}
+
+.text-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.text-section p {
+  columns: #232525;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 90%;
+}
+
+.gallery-img {
+  width: 150px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px auto 13px auto;
+  width: 50%;
+}
+
+.gallery-card {
   display: flex;
   align-items: center;
-  text-transform: uppercase;
-  color: #acacac;
+  background-color: rgb(241, 241, 241);
+  border-radius: 15px;
+  flex-direction: column;
+  height: 220px;
+  justify-content: center;
+  margin: 0 10px 15px 0;
+  width: 180px;
+}
+
+h4 {
+  color: #5C687C;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+hr {
+  margin-top: 10px;
+  width: 25%;
 }
