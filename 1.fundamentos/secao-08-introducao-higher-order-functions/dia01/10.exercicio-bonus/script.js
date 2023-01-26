@@ -64,9 +64,49 @@ const mageAttack = (mage) => {
   if (mageMana > 15) {
     const mageDmg = minDmg < maxDmg ? maxDmg:minDmg;
     turnStats.manaSpent = 15;
-    turnStats.damageDealt = mageDamage;
+    turnStats.damageDealt = mageDmg;
     return turnStats;
   }
 
   return turnStats;
 }
+
+// Parte 2
+// Crie a primeira HOF que compõe o objeto gameActions.
+//Ela será a função que simula o turno do personagem warrior. Essa HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem warrior e atualizará os healthPoints do monstro dragon. Além disso, ela também deve atualizar o valor da chave damage do warrior.
+
+// Crie a segunda HOF que compõe o objeto gameActions.
+//Ela será a função que simula o turno do personagem mage. Essa HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem mage e atualizará os healthPoints do monstro dragon. Além disso, ela também deve atualizar o valor das chaves damagee mana do mage.
+
+// Crie a terceira HOF que compõe o objeto gameActions.
+//Ela será a função que simula o turno do monstro dragon. Essa HOF receberá como parâmetro a função que calcula o dano deferido pelo monstro dragon e atualizará os healthPoints dos personagens mage e warrior. Além disso, ela também deve atualizar o valor da chave damage do monstro.
+
+// Adicione ao objeto gameActions uma função de primeira classe que retorna o objeto battleMembers atualizado e faça um console.log para visualizar o resultado final do turno.
+
+
+const gameActions = {
+  warriorTurn: (warriorAttack) => {
+    const warriorDamage = warriorAttack(warrior);
+    dragon.healthPoints -= warriorDamage;
+    warrior.damage = warriorDamage;
+  },
+  mageTurn: (mageAttack) => {
+    const mageTurnStats = mageAttack(mage);
+    const mageDamage = mageTurnStats.damageDealt;
+    mage.mana -= mageTurnStats.manaSpent;
+    dragon.healthPoints -= mageDamage;
+    mage.damage = mageDamage;
+  },
+  dragonTurn: (dragonAttack) => {
+    const dragonDamage = dragonAttack(dragon);
+    mage.healthPoints -= dragonDamage;
+    warrior.healthPoints -= dragonDamage;
+    dragon.damage = dragonDamage;
+  },
+  turnResults: () => battleMembers
+};
+
+gameActions.warriorTurn(warriorAttack);
+gameActions.mageTurn(mageAttack);
+gameActions.dragonTurn(dragonAttack);
+console.log(gameActions.turnResults())
