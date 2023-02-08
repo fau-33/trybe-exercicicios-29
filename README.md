@@ -53,3 +53,19 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 6-4: _CSS Flexbox - Mobile First_
 - [x] 6-5: _Projeto - Trybewarts_ 
 
+##### Sessão 7: Introdução a Javascript e Teste Unitários
+
+- [x] 7-1: _Fluxo de exceções e manipulação de objeto_ 
+- [x] 7-2: _Primeiros Passos em Jest_
+- [x] 7-3: _Matchers e cobertura de código_
+- [x] 7-4: _Projeto - Javascript Teste Unitários_ 
+
+##### Sessão 8: Higher Order Functions do Javascript ES6
+
+- [x] 7-1: _Introdução ao Higher Order Functions_ 
+- [x] 7-2: _Higher Order Functons - sort e map_
+- [x] 7-3: _Higher Order Functons - filter e reduce_
+- [x] 7-4: _Javascript ES6 - spread operator, rest parameters e object destructuring_ 
+- [x] 7-4: _Javascript ES6 - Array destructuring, Default destructuring, object property shorthand e default parameters_  
+- [x] 7-4: _Projeto - Zoo Functions_ 
+
