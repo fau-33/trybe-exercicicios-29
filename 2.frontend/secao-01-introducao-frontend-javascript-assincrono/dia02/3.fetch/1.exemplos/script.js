@@ -1,6 +1,3 @@
-'use strict'
-
-const fetch = require('node-fetch');
 // fetch
 
 fetch("https://api.goprogram.ai/inspiration")
