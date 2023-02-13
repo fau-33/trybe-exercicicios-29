@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { renderCoins } from './components';
 import { fectchRates } from './services/exchange';
 import './style.css';
@@ -5,10 +6,17 @@ import './style.css';
 const searchBtn = document.querySelector('.search-btn');
 const coinInput = document.querySelector('#coin-input');
 
-renderCoins(fakeCoins, 'BRL');
-
 function handleSearch() {
   const searchedCoin = coinInput.value;
+
+  if (!searchedCoin) {
+    Swal.fire({
+      title: 'Error!',
+      text: 'Você precisa digita uma moeda',
+      icon: 'error',
+    });
+    return;
+  }
 
   // Buscando a moeda pesquisada pelo usuário
   fectchRates(searchedCoin)
@@ -23,6 +31,13 @@ function handleSearch() {
         { name: rate[0], value: rate[1] }
       ));
       renderCoins(ratesArrayObject, base);
+    })
+    .catch((error) => {
+      Swal.fire({
+        title: 'Error!',
+        text: error.message,
+        icon: 'error',
+      });
     });
 }
 
