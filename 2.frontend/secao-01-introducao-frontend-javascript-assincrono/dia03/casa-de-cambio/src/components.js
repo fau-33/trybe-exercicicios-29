@@ -19,7 +19,7 @@ export function createCoinElement(name, value) {
 // Coins precisa de um array [{ name: "USD", value: 5.280 }]
 export function renderCoins(coins, baseCoin) {
   // <h2 class="coins-title">Valores referentes a 1 USD</h2>
-  coinsTitle.innerHTML = `Valores referentes a ${baseCoin}`;
+  coinsTitle.innerHTML = `Valores referentes a 1 ${baseCoin}`;
   coinsListElement.innerHTML = '';// estou limpando a <ul/>
   // <ul> <li...
   coins.forEach((coin) => {
