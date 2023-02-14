@@ -5,16 +5,13 @@ import Swal from 'sweetalert2';
 
 buttonEl.addEventListener('click', handleClick);
 
-async function handleClick() {
-  const cep = inputEl.value;
+export async function handleClick() {
+  const cep = document.querySelector('input').value;
 
   try {
-    const result = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-    const data = await result.json();
-    console.log(data);
-    preEl.innerHTML = JSON.stringify(data);
-    return data;
+    const addressData = await getAddressFromCep(cep);
+    document.querySelector('pre').innerHTML = JSON.stringify(addressData);
   } catch (error) {
-    Swal.fire('Ops', error.message, 'error');
+    alert(error.message);
   }
 }
