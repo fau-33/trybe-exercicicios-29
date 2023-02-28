@@ -1,0 +1,15 @@
+{
+  "name": "3.exercicio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mapString.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
