@@ -1,5 +1,7 @@
-import React, { Component } from "react";
-import SelectInput from "./SelectInput";
+import React, { Component } from 'react';
+import SelectInput from './SelectInput';
+import AnecdoteInput from './AnectdoteInput';
+import NameInput from './NameInput';
 
 class Form extends Component {
   constructor() {
@@ -11,43 +13,65 @@ class Form extends Component {
       age: '',
       anecdote: '',
       terms: false,
+      formularioComErros: true,
     };
 
     this.handleChange = this.handleChange.bind(this);
+  }
 
+  handleError() {
+    const { name, email, age, anecdote, terms } = this.state;
+
+    // Criamos um array com os dados obrigatórios.
+    // Note que estamos usando a propriedade length.
+    // Caso o length seja 0, então !campo.length será
+    // true
+    const errorCases = [
+      !name.length,
+      !email.match(/^\S+@\S+$/i),
+      !age.length,
+      !anecdote.length,
+      !terms,
+    ];
+
+    // Caso haja algum campo que não seja true,
+    // formularioPreenchido estará como false
+    const formularioPreenchido = errorCases.every((error) => error !== true);
+
+    this.setState({
+      // Armazenamos o valor inverso no nosso estado
+      // para sabermos se o formulário possui erros
+      formularioComErros: !formularioPreenchido,
+    });
   }
 
   handleChange({ target }) {
     const { name } = target;
-    const value = (target.type === 'checkbox') ? target.checked : target.value;
-
-    this.setState({
-      [name]: value,
-    });
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    this.setState(
+      {
+        [name]: value,
+        // Após alterarmos o estado, chamamos a função que
+        // verificará os erros.
+      },
+      this.handleError
+    );
   }
 
-
   render() {
-    const { name, email, age, anecdote, terms } = this.state;
-
+    const { name, email, age, anecdote, terms, formularioComErros } =
+      this.state;
 
     return (
       <div>
-        <h1>Estados e React - Tecnologia fantástica ou reagindo a regionalismos?</h1>
-        <form className="name">
+        <h1>
+          Estados e React - Tecnologia fantástica ou reagindo a regionalismos?
+        </h1>
+        <form className="form">
           <fieldset>
-            <legend>Informações Pessoais</legend>
+            <legend>Informações pessoais</legend>
 
-            <label htmlFor="name">
-              Nome:
-              <input
-                type="text"
-                name="name"
-                id="name"
-                onChange={this.handleChange}
-                value={name}
-              />
-            </label>
+            <NameInput name={name} handleChange={this.handleChange} />
 
             <label htmlFor="email">
               Email:
@@ -60,42 +84,36 @@ class Form extends Component {
               />
             </label>
 
-            <SelectInput
-              onChange={this.handleChange}
-              age={age}
-            />
+            <SelectInput age={age} handleChange={this.handleChange} />
           </fieldset>
 
           <fieldset>
             <legend>Texto e arquivos</legend>
-          <label htmlFor="anecdote">
-            Anedota:
-            <textarea
-              name="anecdote"
-              id="anecdote"
-              cols="30"
-              rows="10"
-              onChange={this.handleChange}
-              value={anecdote}
-            ></textarea>
-          </label>
 
-          <input type="file" />
+            <AnecdoteInput
+              anecdote={anecdote}
+              handleChange={this.handleChange}
+            />
 
+            <input type="file" />
           </fieldset>
 
           <label htmlFor="terms">
             <input
+              id="terms"
               type="checkbox"
               name="terms"
-              id="terms"
               onChange={this.handleChange}
               value={terms}
             />
-            Concordo com termos e acordo
+            Concordo com termos e acordos
           </label>
-
         </form>
+        {formularioComErros ? (
+          <span style={{ color: 'red' }}>Preencha todos os campos</span>
+        ) : (
+          <span style={{ color: 'green' }}>Todos campos foram preenchidos</span>
+        )}
       </div>
     );
   }
