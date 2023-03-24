@@ -22,20 +22,19 @@ test('Verificando se existe o botão de enviar', () => {
   expect(btnSend).toHaveProperty('type', 'button');
   expect(btnSend).toHaveValue('Enviar');
 });
-test('Verificando se o botão de email está funcionando', () => {
+test('Verificando se o botão e o campo email estão funcionando.', () => {
+  // Acessar od elementos da tela
   render(<App />);
+  const inputEmail = screen.getByLabelText("Email");
+  const button = screen.getByTestId("id-send");
+  const userEmail = screen.getByTestId("id-email-user");
 
-  const EMAIL_USER = 'email@email.com';
+  // Interagir com os elementos (se for necessário)
+  userEvent.type(inputEmail, 'teste@teste.com');
+  userEvent.click(button);
 
-  const textEmail = screen.getByTestId('id-email-user');
-  expect(textEmail).toBeInTheDocument();
-  expect(textEmail).toHaveTextContent('Valor:');
-
-  const btnSend = screen.getByTestId('id-send');
-  const inputEmail = screen.getByLabelText('Email');
-  userEvent.type(inputEmail, EMAIL_USER);
-  userEvent.click(btnSend);
-
-  expect(inputEmail).toHaveValue('');
-  expect(textEmail).toHaveTextContent(`Valor: ${ EMAIL_USER }`);
+  // Fazer os testes
+  expect(inputEmail).toHaveValue("");
+  expect(userEmail).toHaveTextContent("Valor: teste@teste.com");
+  
 });
