@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
+//import App, { About } from './App';
 
 export const About = () => <h1>Você está na página Sobre</h1>;
 export const Home = () => <h1>Você está na página Início</h1>;

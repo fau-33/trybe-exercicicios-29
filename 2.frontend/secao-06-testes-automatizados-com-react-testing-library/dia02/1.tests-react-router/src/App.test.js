@@ -2,7 +2,7 @@ import React from 'react';
 import { screen, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import renderWithRouter from './renderWithRouter';
-import App from './App';
+import App  from './App';
 
 describe('teste da aplicação toda', () => {
 
@@ -16,18 +16,15 @@ describe('teste da aplicação toda', () => {
   });
 
   it('deve renderizar o componente Sobre', () => {
-    const { history } = renderWithRouter(<App />);
-  
-    const aboutLink = screen.getByRole('link', { name: 'Sobre' });
-    expect(aboutLink).toBeInTheDocument();
-    userEvent.click(aboutLink);
-  
-    const { pathname } = history.location;
+    const { history } =renderWithRouter(<App />);
+    const linkToAbout = screen.getByRole('link', {name: /sobre/i});
+    expect(linkToAbout).toBeDefined();
+
+    userEvent.click(linkToAbout);
+    const {location: {pathname}} = history;
+    const title = screen.getByRole('heading', {name: /'Você está na página Sobre'/i});
     expect(pathname).toBe('/about');
-  
-    const aboutTitle = screen.getByRole('heading',
-      { name: 'Você está na página Sobre' });
-    expect(aboutTitle).toBeInTheDocument();  
+    expect(title).toBeDefined();
   });
   it('deve testar um caminho não existente e a renderização do Not Found', () => {
     const { history } = renderWithRouter(<App />);
