@@ -1,13 +1,24 @@
 import './App.css';
+import React from 'react';
+import { connect } from 'react-redux';
 
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component {
+  render(){
+    const { countState } = this.props;
+    
+    return (
+      <div className='App'>
       <h1>Contador</h1>
-      <p>0</p>
-      <button>Incrementar</button>
-    </div>
-  );
+      <p>{ countState }</p>
+      <button>Incrementar 1</button>
+      <button>Incrementar 5</button>
+    </div>      
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  countState: state.count,
+});
+
+export default connect(mapStateToProps)(App);
