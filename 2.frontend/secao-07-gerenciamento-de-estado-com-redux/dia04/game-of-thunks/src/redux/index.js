@@ -1,9 +1,8 @@
-import { createStory, applyMiddleware } from 'redux';
+import {legacy_createStore as createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from '@redux-devtools/extension';
 import thunk from 'redux-thunk';
 import characterReducer from './reducers/characterReducer';
 
-
-const store =createStory(characterReducer, composeWithDevTools(applyMiddleware(thunk)));
+const store = createStore(characterReducer, composeWithDevTools(applyMiddleware(thunk)));
 
 export default store;
