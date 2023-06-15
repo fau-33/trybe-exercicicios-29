@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  frontend:
+    build: ./3.exercicio-pratico5
+    ports:
+      - 8080:80
