@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bmi": "node bmi.js",
+    "simpsons": "node simpsons.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
