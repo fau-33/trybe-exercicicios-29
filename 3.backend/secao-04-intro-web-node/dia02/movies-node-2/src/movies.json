@@ -4,7 +4,7 @@
     "movie": "Avatar",
     "price": 5
   },
-   {
+  {
     "id": 2,
     "movie": "Gente Grande",
     "price": 2
@@ -18,11 +18,6 @@
     "id": 4,
     "movie": "Quebrando a Banca",
     "price": 5
-  },
-  {
-    "id": 5,
-    "movie": "Lilo & Stitch",
-    "price": 2
   },
   {
     "id": 6,
