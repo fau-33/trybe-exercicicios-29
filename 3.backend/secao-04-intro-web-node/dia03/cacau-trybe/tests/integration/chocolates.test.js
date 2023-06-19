@@ -126,3 +126,13 @@ describe('Usando o método GET em /chocolates/:id para buscar o ID 4', function 
       ]);
     });
   });
+
+  describe('Usando o método GET em /chocolates/total', function () {
+    it('Retorna a quantidade total de chocolates', async function () {
+      const response = await chai.request(app)
+        .get('/chocolates/total');
+
+      expect(response.status).to.be.equal(200);
+      expect(response.body).to.deep.equal({ totalChocolates: 4 });
+  });
+});
