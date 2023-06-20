@@ -3,12 +3,10 @@ const teamsUtils = require('../utils/teamsUtils');
 const existingId = (req, res, next) => {
     const id = Number(req.params.id);
   
-    if (teamsUtils.some((t) => t.id === id)) {
-      // se existe, a requisição segue para o próximo middleware
-      return next();
+    if (!teamsUtils.some((t) => t.id === id)) {
+         return res.sendStatus(404).json({ message: 'Time não encontrado' }); 
     }
-    // se não existe, então vamos retornar o status HTTP 404
-    res.sendStatus(400);
+    next();
   };
 
 module.exports = existingId;  
